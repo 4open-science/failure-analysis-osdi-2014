@@ -1,0 +1,135 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-intensive Systems</title>
+        <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <meta content="TRUE" name="MSSmartTagsPreventParsing" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div id="breadcrumb">
+             <a href="index.html">Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-intensive Systems</a>
+        </div>
+        <div id="page">
+            <div id="menu">
+                <div><a href="index.html">Home</a>
+                </div>
+                <div><a href="HDFS.html">HDFS</a>
+                </div>
+                <div><a href="MapReduce.html">Hadoop MapReduce</a>
+                </div>
+                <div><a href="HBase.html">HBase</a>
+                </div>
+                <div><a href="Redis.html">Redis</a>
+                </div>
+                <div><a href="Cassandra.html">Cassandra</a>
+                </div>
+            </div>
+            <div id="content">
+                <div class="article-title">An Analysis of Production Failures in Distributed Data-intensive Systems
+                </div>
+                <ul>
+                <li class="pub">
+                      This page contains the detailed analysis of a large collection of failure reports. This is the dataset we used in our paper titled:
+                      <br><br>
+<span class="title"><font color="#0000ff"><a href="http://www.eecg.toronto.edu/~yuan/papers/failure_analysis_osdi14.pdf">Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-intensive Systems</a></font></span> 
+Ding Yuan, Yu Luo, Xin Zhuang, Guilherme Rodrigues, Xu Zhao, Yongle Zhang, Pranay U. Jain, and Michael Stumm. In the Proceedings of the 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI'14), October 2014. 
+                      <br><br>
+The failures are from five widely used open source software projects: Cassandra, HDFS, Hadoop MapReduce, HBase, and Redis. 
+In each diagnosis report, we document in detail the root causes and the 
+symptoms of the failure, as well as the manifestation process. 
+In addition, we also discuss whether each failure provides sufficient log
+messages for diagnosis, as well as how it was fixed.  
+If a failure was reproduced by us, we also document the detail procedure of reproducing it.
+                       
+                      <br><br>
+
+                </li>
+                </ul>
+                <div class="article-title">Failure set
+                </div>
+                <ul>
+                    <li class="pub">
+                         <a href="HDFS.html">HDFS</a>
+                    </li>
+                    <li class="pub">
+                         <a href="MapReduce.html">Hadoop MapReduce</a>
+                    </li>
+                    <li class="pub">
+                         <a href="HBase.html">HBase</a>
+                    </li>
+                    <li class="pub">
+                         <a href="Redis.html">Redis</a>
+                    </li>
+                    <li class="pub">
+                         <a href="Cassandra.html">Cassandra</a>
+                    </li>
+                </ul>
+
+                <div class="article-title">Aspirator: A simple static checker
+                </div>
+One of our findings is that the cause of some of the most catastrophic
+failures, i.e., failures that affect all or majority of the users, 
+are caused by some simple bugs in the error handling code. We further
+extracted a few rules from these bugs and built a static checker, Aspirator,
+to automatically detect these bugs. The source code of Aspirator is 
+available here: 
+                <ul>
+                    <li class="pub">
+<a href="https://github.com/diy1/aspirator">Aspirator: a simple static checker for 
+serious bugs</a>
+                    </li>
+                </ul>
+
+<div class="article-title">Impact</div>
+Our paper stirred quite a few online discussions in news, blogs, developers' mailing list, and hundreds of tweets (see <a href="https://twitter.com/search?f=realtime&q=testing%20can%20prevent%20most%20critical%20failures&src=typd">this</a> and <a href="https://twitter.com/search?f=realtime&q=osdi14-paper-yuan&src=typd">this</a>). 
+Here goes a few of them (and if you wrote something about it, let us know!): 
+                <ul>
+                    <li>
+                         Hacker News <a href="https://news.ycombinator.com/item?id=8436496">[1]</a>, <a href="https://news.ycombinator.com/item?id=8981707">[2]</a>, 
+                    </li>
+                    <li>
+                         <a href="http://mail-archives.apache.org/mod_mbox/incubator-drill-dev/201410.mbox/%3CCAFx0iW9MPa7=3wbUGFK6qSOou2xhaLQHuEabYMk4xn+nw3Z91Q@mail.gmail.com%3E">Discussions</a> from HBase developers, which prompted a <a href="https://issues.apache.org/jira/browse/HBASE-12187">series of reactions</a> to address the problems we mentioned in the paper.
+                    </li>
+                    <li>Twitter discussions: see <a href="https://twitter.com/search?f=realtime&q=testing%20can%20prevent%20most%20critical%20failures&src=typd">this</a>, <a href="https://twitter.com/search?f=realtime&q=osdi14-paper-yuan&src=typd">this</a>, and <a href="https://twitter.com/search?f=realtime&q=conference%2Fosdi14%2Ftechnical-sessions%2Fpresentation%2Fyuan&src=typd">this</a> 
+(if you're looking for a screenshot that summarizes our paper, see <a href="https://twitter.com/zeeshanlakhani/status/527208716404523008">this</a> or <a href="http://imgur.com/7cAqwMq">this</a>).</li>
+                    <li class="pub">
+                         <a href="http://omnifeed.com/article/neverworkintheory.org/2014/10/08/simple-testing-can-prevent-most-critical-failures.html">neverworkintheory.org</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="http://tm.durusau.net/?p=56925">Another word for it</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="http://muratbuffalo.blogspot.com/2015/03/paper-review-simple-testing-can-prevent.html">Metadata</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="https://leanpub.com/50quickideas-tests/read">Fifty Quick Ideas to Improve Your Tests</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="http://danluu.com/postmortem-lessons/">Postmortem lessons</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="http://www.agilezilla.com/preventing-production-failures-in-distributed-data-intensive-systems/">Agilezilla</a>.
+                    </li>
+                    <li class="pub">
+                         <a href="https://plus.google.com/107049823915731374389/posts/PQvuSs27vdC">Some discussions on Google+</a>.
+                    </li>
+                    <li>And quite a few emails sent to us from developers...</li> 
+                </ul>
+
+
+
+                <div class="article-title">Contacts
+                </div>
+                <ul>
+                    <li class="pub">
+                         <a href="http://www.eecg.toronto.edu/~yuan/Home.html">Ding Yuan</a>, yuan at eecg dot toronto dot edu
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

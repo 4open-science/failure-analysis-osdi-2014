@@ -1,0 +1,181 @@
+body { 
+	background-color: #FFFFFF;  
+	color: Black;
+	border: 0px; 
+	margin: 0px; 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+h1 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: large; /*font-style: italic;*/
+	color: Black;
+	margin: 12px;
+	white-space: nowrap;
+}
+
+h2 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: large;
+	color: Black;
+	background-color: transparent;
+	margin-right: 25px;
+	text-align: right;
+	white-space: nowrap;
+}
+
+#breadcrumb { 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: small; 
+	border-bottom: 1px solid #00016A; 
+	border-top:1px solid #00016A; 
+	padding-top: 10px; padding-bottom: 10px; 
+	padding-left: 20px;  background-color: #F0FFF0; 
+	color: Balck;  
+	white-space: nowrap;   
+}
+
+#breadcrumb a{ 
+	color: Blue; 
+	text-decoration: none; 
+	background-color: transparent;
+}
+
+#breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+#page {
+	margin: 10px;
+	padding: 10px;
+}
+
+#menu {
+	position: absolute;
+	width: 200px;
+	/*top: 200px;*/
+	text-align: left;
+	font-size: small;
+}
+#menu a{
+	text-decoration: none;
+	background-color: #F0FFF0;
+	font-weight: bold; 
+	display: block; 
+	padding: 5px; 
+	width: 120px; 
+	margin-bottom: 5px; 
+	border: 1px solid Black; /*#00016A; #8FBC8F;*/
+	color: #00016A;
+}
+
+#menu .selected{
+	text-decoration: none; /*background-color: #F0FFF0;*/
+	font-weight: bold;
+	display: block;
+	padding: 5px;
+	width: 120px;
+	margin-bottom: 5px;
+	border: 1px solid #00016A; /*#2F4F4F;*/
+	color: White;
+	background-color: #00016A;
+}
+
+#menu a:hover {
+	background-color: #F0FFF0; /*color: White;*/
+	color: Black;
+	border-top: 1px solid #00016A;
+	border-left: 1px solid #00016A;
+	border-right: 1px solid #00016A;
+	border-bottom: 1px solid #00016A; /*#2F4F4F;*/
+}
+#options a{
+	background-color: #6B8E23;
+	color: White;
+	border-top: 1px solid #8FBC8F;
+	border-left: 1px solid #8FBC8F;
+	border-right: 1px solid #8FBC8F;
+	border-bottom: 1px solid #2F4F4F;
+}
+
+.current {
+	background-color: #6B8E23;
+	color: White;
+	border-top: 1px solid #8FBC8F;
+	border-left: 1px solid #8FBC8F;
+	border-right: 1px solid #8FBC8F;
+	border-bottom: 1px solid #2F4F4F	
+}
+
+.padded {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#content {
+	position: absolute;
+	border-left: 1px solid #00016A;
+	padding-left: 10px;
+	left: 170px;
+	/*top: 200px;*/
+}
+
+#content li {
+	padding: 2px;
+}
+
+.pub {
+	padding: 5px;
+}
+
+.new{
+	list-style-image: url(http://www.eecg.toronto.edu/failureAnalysis/New1.GIF);
+}
+
+#content p {
+	padding-left: 30px;
+}
+
+.title{
+	padding-left: 0px;
+}
+
+
+#footer {
+	border: 1px dotted black;
+	color: #556B2F;
+	background-color: #FAFAD2;
+	margin-top: 20px;	
+	margin-bottom: 20px;
+}
+a {
+	color: Blue;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.footer {
+	text-align: center;
+	font-size: xx-small;
+	color: Gray;
+	padding-bottom: 15px;
+}
+.author, .datetime {
+	font-weight: bold;
+	color: #4F4F4F;
+}
+.article-title {
+	font-size: large;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: Black;
+}
+
+.sub-category {
+        font-size: medium;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        color: Black;
+}
